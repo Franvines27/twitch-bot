@@ -119,7 +119,11 @@ async def tfollow(ctx, arg):
                             ttoken = tokens[i]
                             payload = '[{\"operationName\":\"FollowButton_FollowUser\",\"variables\":{\"input\":{\"disableNotifications\":false,\"targetID\":\"'+target_id+'\"}},\"extensions\":{\"persistedQuery\":{\"version\":1,\"sha256Hash\":\"51956f0c469f54e60211ea4e6a34b597d45c1c37b9664d4b62096a1ac03be9e6\"}}}]'
                             headers = {"Authorization": f"OAuth {ttoken}","Client-Id": 'kimne78kx3ncx6brgo4mv6wki5h1ko',"Content-Type": "application/json"}
-                            if get_config['follow_proxy'] == True:
+                            config_file = get_config()
+                            json_object = json.loads(config_file)
+                            proxyx =json_object['bot_config']["follow_proxy"]
+                            
+                            if proxyx == True:
                                 session.post('https://gql.twitch.tv/gql', data=payload, headers=headers,proxies=proxies, timeout=30)
                             else:
                                 session.post('https://gql.twitch.tv/gql', data=payload, headers=headers)
