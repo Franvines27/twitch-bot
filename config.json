@@ -1,0 +1,22 @@
+{
+    "bot_config": {
+        "server_id": 861314709067792454,
+        "prefix": ".",
+        "token": "",
+        "twitch_channel": "892834087843283005"
+    },
+    "tfollow": {
+        "➣ Premium": 1000,
+        "➣ Mega": 500,
+        "➣ Vip": 200,
+        "➣ Nitro": 150,
+        "➣ Basic": 50
+    },
+    "tspam": {
+        "➣ Premium": 80,
+        "➣ Mega": 50,
+        "➣ Vip": 40,
+        "➣ Nitro": 30,
+        "➣ Basic": 20
+    }
+}
