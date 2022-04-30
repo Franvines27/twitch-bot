@@ -3,7 +3,8 @@
         "server_id": 861314709067792454,
         "prefix": ".",
         "token": "",
-        "twitch_channel": "892834087843283005"
+        "twitch_channel": "892834087843283005",
+        "follow_proxy":true
     },
     "tfollow": {
         "➣ Premium": 1000,
