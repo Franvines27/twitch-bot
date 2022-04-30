@@ -23,11 +23,6 @@ token = config['bot_config']["token"]
 load_dotenv()
 intents = discord.Intents().all()
 bot = commands.AutoShardedBot(command_prefix=get_prefix(), help_command=None, intents=intents)
-
-def init():
-    loop = asyncio.get_event_loop()
-    loop.create_task(bot.run(token))
-    threading.Thread(target=loop.run_forever).start()
     
 
 @bot.command()
@@ -210,6 +205,4 @@ async def tspam(ctx, arg1, *, args):
                         threading.Thread(target=start_spam, args=(tokens[i],)).start()
                 except: None
                 break
-        
-init()
-
+bot.run(token)
